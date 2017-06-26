@@ -37,61 +37,70 @@
             // 
             // sendButton
             // 
-            this.sendButton.Location = new System.Drawing.Point(14, 553);
-            this.sendButton.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.sendButton.AutoSize = true;
+            this.sendButton.Location = new System.Drawing.Point(8, 387);
             this.sendButton.Name = "sendButton";
-            this.sendButton.Size = new System.Drawing.Size(664, 30);
+            this.sendButton.Size = new System.Drawing.Size(427, 30);
             this.sendButton.TabIndex = 0;
             this.sendButton.Text = "Send";
             this.sendButton.UseVisualStyleBackColor = true;
+            this.sendButton.Click += new System.EventHandler(this.sendButton_Click);
             // 
             // messages
             // 
             this.messages.FormattingEnabled = true;
-            this.messages.ItemHeight = 29;
-            this.messages.Location = new System.Drawing.Point(14, 12);
+            this.messages.ItemHeight = 20;
+            this.messages.Location = new System.Drawing.Point(9, 8);
+            this.messages.Margin = new System.Windows.Forms.Padding(2);
             this.messages.Name = "messages";
-            this.messages.Size = new System.Drawing.Size(664, 497);
+            this.messages.Size = new System.Drawing.Size(428, 344);
             this.messages.TabIndex = 1;
             // 
             // users
             // 
             this.users.FormattingEnabled = true;
-            this.users.ItemHeight = 29;
-            this.users.Location = new System.Drawing.Point(693, 12);
+            this.users.ItemHeight = 20;
+            this.users.Location = new System.Drawing.Point(440, 38);
+            this.users.Margin = new System.Windows.Forms.Padding(2);
             this.users.Name = "users";
-            this.users.Size = new System.Drawing.Size(278, 497);
+            this.users.Size = new System.Drawing.Size(181, 364);
             this.users.TabIndex = 2;
             // 
             // disconnectButton
             // 
-            this.disconnectButton.Location = new System.Drawing.Point(693, 553);
+            this.disconnectButton.Location = new System.Drawing.Point(441, 8);
+            this.disconnectButton.Margin = new System.Windows.Forms.Padding(2);
             this.disconnectButton.Name = "disconnectButton";
-            this.disconnectButton.Size = new System.Drawing.Size(278, 30);
+            this.disconnectButton.Size = new System.Drawing.Size(179, 29);
             this.disconnectButton.TabIndex = 3;
             this.disconnectButton.Text = "Disconnect";
             this.disconnectButton.UseVisualStyleBackColor = true;
+            this.disconnectButton.Click += new System.EventHandler(this.disconnectButton_Click);
             // 
             // messageToSend
             // 
-            this.messageToSend.Location = new System.Drawing.Point(14, 511);
+            this.messageToSend.Location = new System.Drawing.Point(7, 356);
+            this.messageToSend.Margin = new System.Windows.Forms.Padding(2);
             this.messageToSend.MaxLength = 500;
             this.messageToSend.Name = "messageToSend";
-            this.messageToSend.Size = new System.Drawing.Size(664, 35);
+            this.messageToSend.Size = new System.Drawing.Size(428, 26);
             this.messageToSend.TabIndex = 4;
+            this.messageToSend.TextChanged += new System.EventHandler(this.messageToSend_TextChanged);
             // 
             // ChatScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
+            this.AcceptButton = this.sendButton;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(983, 595);
+            this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
+            this.ClientSize = new System.Drawing.Size(632, 410);
             this.Controls.Add(this.messageToSend);
             this.Controls.Add(this.disconnectButton);
             this.Controls.Add(this.users);
             this.Controls.Add(this.messages);
             this.Controls.Add(this.sendButton);
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "ChatScreen";
             this.Text = "ChatScreen";
             this.Load += new System.EventHandler(this.ChatScreen_Load);

@@ -2,12 +2,11 @@
 {
     static class Global
     {
-        public const byte messageByte = 0;
-        public const byte loginByte = 2;
+        public static string username { get; set; }
 
         public class Net
         {
-            public static System.Net.Sockets.Socket connection { get; set; }
+            public static System.Net.Sockets.Socket server { get; set; }
         }
         public class Messages
         {
@@ -24,6 +23,12 @@
             public class Message
             {
                 public string message { get; set; }
+            }
+            public class Registration
+            {
+                public string type = "registration";
+                public string username { get; set; }
+                public string password { get; set; }
             }
         }
     }
